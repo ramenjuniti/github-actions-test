@@ -1,0 +1,20 @@
+name: workflow run 2
+
+on:
+  workflow_run:
+    workflows:
+      - workflow run 1
+    branches:
+      - master
+    types:
+      - completed
+
+
+jobs:
+  workflow-run-2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: echo
+        run: echo "workflow run 2"
