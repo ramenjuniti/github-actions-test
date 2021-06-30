@@ -5,7 +5,7 @@ on:
     workflows:
       - workflow run 1
     branches:
-      - master
+      - develop
     types:
       - completed
 
