@@ -15,8 +15,6 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-        with:
-          ref: master
       - name: echo
         run: echo "workflow run 3-3"
       - name: Branch name
