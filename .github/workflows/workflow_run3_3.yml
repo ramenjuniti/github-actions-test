@@ -16,8 +16,11 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.workflow_run.head_branch }}
+          ref: master
       - name: echo
         run: echo "workflow run 3-3"
       - name: branch
-        run: echo ${{ github.ref }}
+        uses: nelonoel/branch-name@v1.0.1
+        run: echo ${BRANCH_NAME}
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
