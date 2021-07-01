@@ -3,7 +3,7 @@ name: workflow run 1
 on:
   push:
     branches:
-    - develop
+    - master
 
 jobs:
   workflow-run-1:
