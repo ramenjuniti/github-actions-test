@@ -22,3 +22,5 @@ jobs:
       - name: branch
         uses: nelonoel/branch-name@v1.0.1
         run: echo ${BRANCH_NAME}
+      - name: Branch name
+        run: echo running on branch ${GITHUB_REF##*/}
