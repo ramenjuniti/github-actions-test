@@ -4,8 +4,6 @@ on:
   workflow_run:
     workflows:
       - workflow run 1
-    branches:
-      - master
     types:
       - completed
 
