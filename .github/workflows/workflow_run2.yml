@@ -5,7 +5,7 @@ on:
     workflows:
       - workflow run 1
     branches:
-      - develop
+      - master
     types:
       - completed
 
@@ -17,5 +17,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
+        with:
+          ref: ${{ github.ref }}
       - name: echo
         run: echo "workflow run 2"
+      - name: branch
+        run: echo ${{ github.ref }}
