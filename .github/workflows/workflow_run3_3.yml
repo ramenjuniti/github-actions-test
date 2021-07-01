@@ -19,8 +19,5 @@ jobs:
           ref: master
       - name: echo
         run: echo "workflow run 3-3"
-      - name: branch
-        uses: nelonoel/branch-name@v1.0.1
-        run: echo ${BRANCH_NAME}
       - name: Branch name
-        run: echo running on branch ${GITHUB_REF##*/}
+        run: git branch
