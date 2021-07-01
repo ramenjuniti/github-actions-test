@@ -13,3 +13,5 @@ jobs:
         uses: actions/checkout@v2
       - name: echo
         run: echo "workflow run 1"
+      - name: branch
+        run: echo ${{ github.ref }}
