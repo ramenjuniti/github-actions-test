@@ -28,3 +28,5 @@ jobs:
         uses: actions/checkout@v2
       - name: echo
         run: echo job2-2
+      - name: exit 1
+        run: exit 1
