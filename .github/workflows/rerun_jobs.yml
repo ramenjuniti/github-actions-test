@@ -11,22 +11,33 @@ jobs:
       - name: echo
         run: echo job1
 
-  job2-1:
+  job2:
     needs: job1
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: echo
-        run: echo job2-1
+        run: echo job2
+      - name: exit 1
+        run: exit 1
+
+  job3-1:
+    needs: job2
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout
+        uses: actions/checkout@v2
+      - name: echo
+        run: echo job3-1
 
   job2-2:
-    needs: job1
+    needs: job2
     runs-on: ubuntu-latest
     steps:
       - name: checkout
         uses: actions/checkout@v2
       - name: echo
-        run: echo job2-2
+        run: echo job3-2
       - name: exit 1
         run: exit 1
