@@ -9,4 +9,6 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: echo env
-        run: echo ${{ github.repository }: -1 }
+        env:
+          AAA: ${{ github.repository }
+        run: echo ${AAA:-1}
