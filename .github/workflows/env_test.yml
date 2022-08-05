@@ -11,4 +11,4 @@ jobs:
       - name: echo env
         env:
           AAA: ${{ github.repository }}
-        run: echo ${AAA:-1}
+        run: echo ${AAA:-1:1}
