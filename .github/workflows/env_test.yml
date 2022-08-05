@@ -16,3 +16,5 @@ jobs:
         env:
           REPO_NAME: ${{ github.repository }}
         run: "echo ${REPO_NAME: -1}"
+      - name: echo 
+        run: "echo ${ ${{ github.repository}}: -1}"
