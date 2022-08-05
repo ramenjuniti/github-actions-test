@@ -9,6 +9,4 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
       - name: echo env
-        env:
-          REPOSITORY_NAME: ${{ github.repository }}
-        run: echo ${ REPOSITORY_NAME: -1 }
+        run: echo ${{ github.repository: -1 }}
