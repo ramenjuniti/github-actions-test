@@ -12,7 +12,9 @@ jobs:
         env:
           REPO_NAME: ${{ github.repository }}
         run: echo $REPO_NAME
-      - name: echo repo_name:-1
+      - name: register group_name to env
         env:
           REPO_NAME: ${{ github.repository }}
         run: "echo group_name=${REPO_NAME: -1} >> $GITHUB_ENV"
+      - name: echo group_name
+        run: echo ${{ env.group_name }}
