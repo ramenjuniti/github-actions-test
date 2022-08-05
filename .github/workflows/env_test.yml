@@ -10,7 +10,7 @@ jobs:
         uses: actions/checkout@v2 
       - name: echo
         run: echo REPO_NAME
-      - name: echo ${{ github.repository:-1 }}
+      - name: echo ${{github.repository}:-1}
         env:
           REPO_NAME: ${{ github.repository }}
         run: echo REPO_NAME
